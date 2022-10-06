@@ -151,3 +151,47 @@ function updateTile(e) {
     }
     updatePlayer();
   }
+  function checkWin() {
+    if (state.turnCount === 9 && state.winner === 'none') {
+      alert('draw');
+    }
+    state.xTiles.sort((a, b) => a - b);
+    state.oTiles.sort((a, b) => a - b);
+    for (let index = 0; index < state.winCondition.length; index++) {
+      const line = state.winCondition[index];
+      console.log(line);
+      if (
+        state.xTiles.includes(line[0]) &&
+        state.xTiles.includes(line[1]) &&
+        state.xTiles.includes(line[2]) ||
+        state.oTiles.includes(line[0]) &&
+        state.oTiles.includes(line[1]) &&
+        state.oTiles.includes(line[2])
+      ) {
+        state.winner = state.playerTurn
+        gameOver();
+      }
+     else if (
+        state.xTiles.includes([0]) &&
+        state.xTiles.includes([1]) &&
+        state.xTiles.includes([2]) ||
+        state.oTiles.includes(line[0]) &&
+        state.oTiles.includes(line[1]) &&
+        state.oTiles.includes(line[2])
+      ) {
+        state.winner = state.playerTurn
+        gameOver();
+    }
+    else if (
+      state.xTiles.includes(line[0]) &&
+      state.xTiles.includes(line[1]) &&
+      state.xTiles.includes(line[2]) ||
+      state.oTiles.includes(line[0]) &&
+      state.oTiles.includes(line[1]) &&
+      state.oTiles.includes(line[2])
+    ) {
+      state.winner = state.playerTurn
+      gameOver();
+  }
+    }
+  }
