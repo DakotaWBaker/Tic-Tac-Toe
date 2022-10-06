@@ -122,3 +122,15 @@ div9.addEventListener(
   },
   { once: true }
 );
+function updateTile(e) {
+    e.target.innerHTML = `${state.playerTurn}`;
+  if (state.playerTurn === 'X') {
+      state.xTiles.push(parseInt(e.target.id));
+  } else {
+      state.oTiles.push(parseInt(e.target.id));
+  }
+   
+   
+    updateState();
+  }
+  
