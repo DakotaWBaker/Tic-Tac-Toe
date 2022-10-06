@@ -122,3 +122,32 @@ div9.addEventListener(
   },
   { once: true }
 );
+function updateTile(e) {
+    e.target.innerHTML = `${state.playerTurn}`;
+  if (state.playerTurn === 'X') {
+      state.xTiles.push(parseInt(e.target.id));
+  } else {
+      state.oTiles.push(parseInt(e.target.id));
+  }
+   
+   
+    updateState();
+  }
+  function updatePlayer() {
+    if (state.playerTurn === "X") {
+      state.playerTurn = "O";
+      turn.innerHTML = 'Player 2s Turn';
+    } else {state.playerTurn = 'X';
+    turn.innerHTML = 'Player 1s Turn';
+    }
+   
+  }
+  
+  function updateState() {
+    state.turnCount++;
+    
+    if (state.turnCount > 3){
+    checkWin();
+    }
+    updatePlayer();
+  }
