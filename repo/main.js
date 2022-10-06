@@ -48,3 +48,77 @@ function drawBoard() {
   createPage(mainDiv, 'p', 'player', 'play', 'Player 1s Turn');
 }
 drawBoard();
+const div1 = document.getElementById("0");
+const div2 = document.getElementById("1");
+const div3 = document.getElementById("2");
+const div4 = document.getElementById("3");
+const div5 = document.getElementById("4");
+const div6 = document.getElementById("5");
+const div7 = document.getElementById("6");
+const div8 = document.getElementById("7");
+const div9 = document.getElementById("8");
+const turn = document.getElementById('play');
+div1.addEventListener(
+  "click",
+  (e) => {
+    updateTile(e);
+  },
+  { once: true }
+);
+
+div2.addEventListener(
+  "click",
+  (e) => {
+    updateTile(e);
+  },
+  { once: true }
+);
+div3.addEventListener(
+  "click",
+  (e) => {
+    updateTile(e);
+  },
+  { once: true }
+);
+div4.addEventListener(
+  "click",
+  (e) => {
+    updateTile(e);
+  },
+  { once: true }
+);
+div5.addEventListener(
+  "click",
+  (e) => {
+    updateTile(e);
+  },
+  { once: true }
+);
+div6.addEventListener(
+  "click",
+  (e) => {
+    updateTile(e);
+  },
+  { once: true }
+);
+div7.addEventListener(
+  "click",
+  (e) => {
+    updateTile(e);
+  },
+  { once: true }
+);
+div8.addEventListener(
+  "click",
+  (e) => {
+    updateTile(e);
+  },
+  { once: true }
+);
+div9.addEventListener(
+  "click",
+  (e) => {
+    updateTile(e);
+  },
+  { once: true }
+);
