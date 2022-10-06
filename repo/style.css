@@ -1,0 +1,14 @@
+.col {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+.row {
+    width: 600px;
+}
+.col4 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
