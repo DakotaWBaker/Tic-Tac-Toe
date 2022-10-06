@@ -195,3 +195,15 @@ function updateTile(e) {
   }
     }
   }
+  function gameOver() {
+    if (state.winner === 'X') {
+     setTimeout(() => {
+       alert('X WINS')
+     }, 100);
+     }
+     else if (state.winner === 'O') {
+      setTimeout(() => {
+       alert('O WINS')
+      }, 100);
+   }
+   }
