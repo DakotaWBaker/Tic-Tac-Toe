@@ -133,4 +133,21 @@ function updateTile(e) {
    
     updateState();
   }
+  function updatePlayer() {
+    if (state.playerTurn === "X") {
+      state.playerTurn = "O";
+      turn.innerHTML = 'Player 2s Turn';
+    } else {state.playerTurn = 'X';
+    turn.innerHTML = 'Player 1s Turn';
+    }
+   
+  }
   
+  function updateState() {
+    state.turnCount++;
+    
+    if (state.turnCount > 3){
+    checkWin();
+    }
+    updatePlayer();
+  }
