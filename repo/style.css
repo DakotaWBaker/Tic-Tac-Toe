@@ -1,3 +1,7 @@
+html, body {
+    background-color: #fca311;
+    color: #0077b6
+}
 .col {
     width: 100px;
     height: 100px;
@@ -10,26 +14,36 @@
 }
 
 .col2 {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid #0077b6;
+    border-right: 2px solid #0077b6;
 }
 .col4 {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 2px solid #0077b6;
+    border-bottom: 2px solid #0077b6;
    
 }
 .col5 {
-    border: 2px solid black;
+    border: 2px solid #0077b6;
 }
 .col6 {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 2px solid #0077b6;
+    border-bottom: 2px solid #0077b6;
 }
 .col8 {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid #0077b6;
+    border-right: 2px solid #0077b6;
 }
 #main {
     margin-top: 200px;
     margin-left: 200px;
+}
+#play {
+    font-size: 2rem;
+}
+#btn1 {
+    margin-bottom: 2px;
+    margin-left: 15px;
+}
+#input1 {
+    margin-right: 5px;
 }
