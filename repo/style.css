@@ -1,14 +1,35 @@
 .col {
-    border: 1px solid black;
     width: 100px;
     height: 100px;
+    padding-top: 15px;
     text-align: center;
-    font-size: 20px;
+    font-size: 40px;
 }
 .row {
-    width: 600px;
+    width: 400px;
+}
+
+.col2 {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 .col4 {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+   
+}
+.col5 {
+    border: 2px solid black;
+}
+.col6 {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.col8 {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+#main {
+    margin-top: 200px;
+    margin-left: 200px;
 }
