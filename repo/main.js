@@ -47,8 +47,7 @@ function drawBoard() {
   createPage(thirdRow, "div", "col col7", "6", "");
   createPage(thirdRow, "div", "col col8", "7", "");
   createPage(thirdRow, "div", "col col9", "8", "");
-  createPage(mainCont, "button", "btn", "btn", "RESET");
-  createPage(mainCont, "p", "player", "play", "");
+  createPage(mainCont, "button", "btn btn-primary", "btn", "RESET");
   createPage(mainCont, "p", "player", "play", "");
 
   const nameForm = document.createElement("form");
@@ -65,7 +64,8 @@ function drawBoard() {
   nameForm.appendChild(player2);
   const submit = document.createElement("input");
   submit.setAttribute("type", "submit");
-  submit.setAttribute("id", "btn");
+  submit.setAttribute("id", "btn1");
+  submit.setAttribute('class', 'btn btn-primary')
   submit.innerText = "Set Name";
   nameForm.appendChild(submit);
 
@@ -148,6 +148,7 @@ function drawBoard() {
       state.xTiles = [];
       state.oTiles = [];
       state.turnCount = 0;
+      state.winner= 'none'
       if (mainCont) {
         mainCont.removeChild(turn);
         mainCont.removeChild(btn);
@@ -191,7 +192,7 @@ function updateState() {
 }
 function checkWin() {
   if (state.turnCount === 9 && state.winner === "none") {
-    alert("draw");
+    alert('draw');
   }
   state.xTiles.sort((a, b) => a - b);
   state.oTiles.sort((a, b) => a - b);
@@ -234,11 +235,11 @@ function checkWin() {
 function gameOver() {
   if (state.winner === "X") {
     setTimeout(() => {
-      alert(`${state.firstName} WINS!`);
+      turn.innerHTML = `${state.firstName} WINS`;;
     }, 100);
   } else if (state.winner === "O") {
     setTimeout(() => {
-      alert(`${state.secondName} WINS!`);
+      turn.innerHTML = `${state.firstName} WINS`;;
     }, 100);
   }
 }
